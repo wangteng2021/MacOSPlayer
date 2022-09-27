@@ -13,6 +13,8 @@
 		6B7AD72E28E2869700C81A2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7AD72C28E2869700C81A2B /* Main.storyboard */; };
 		6B7AD73028E2869700C81A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7AD72F28E2869700C81A2B /* main.m */; };
 		6B7AD73D28E2985800C81A2B /* WTSongListTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7AD73C28E2985800C81A2B /* WTSongListTableCellView.m */; };
+		6B7AD74828E2DF3A00C81A2B /* WTSettingVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7AD74628E2DF3A00C81A2B /* WTSettingVc.m */; };
+		6B7AD74928E2DF3A00C81A2B /* WTSettingVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7AD74728E2DF3A00C81A2B /* WTSettingVc.xib */; };
 		DA1C4162941FF7FB9D3C83DD /* Pods_MacOSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC308372A4E21C430E1CE23 /* Pods_MacOSDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,9 @@
 		6B7AD73128E2869700C81A2B /* MacOSDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOSDemo.entitlements; sourceTree = "<group>"; };
 		6B7AD73B28E2985800C81A2B /* WTSongListTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTSongListTableCellView.h; sourceTree = "<group>"; };
 		6B7AD73C28E2985800C81A2B /* WTSongListTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTSongListTableCellView.m; sourceTree = "<group>"; };
+		6B7AD74528E2DF3A00C81A2B /* WTSettingVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTSettingVc.h; sourceTree = "<group>"; };
+		6B7AD74628E2DF3A00C81A2B /* WTSettingVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTSettingVc.m; sourceTree = "<group>"; };
+		6B7AD74728E2DF3A00C81A2B /* WTSettingVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WTSettingVc.xib; sourceTree = "<group>"; };
 		A23D45BF092067017658089B /* Pods-MacOSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOSDemo.debug.xcconfig"; path = "Target Support Files/Pods-MacOSDemo/Pods-MacOSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BCC308372A4E21C430E1CE23 /* Pods_MacOSDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacOSDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +79,7 @@
 		6B7AD72328E2869500C81A2B /* MacOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6B7AD73E28E2D5D100C81A2B /* Controller */,
 				6B7AD73728E2965C00C81A2B /* View */,
 				6B7AD72428E2869500C81A2B /* AppDelegate.h */,
 				6B7AD72528E2869500C81A2B /* AppDelegate.m */,
@@ -94,6 +100,16 @@
 				6B7AD73C28E2985800C81A2B /* WTSongListTableCellView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6B7AD73E28E2D5D100C81A2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6B7AD74528E2DF3A00C81A2B /* WTSettingVc.h */,
+				6B7AD74628E2DF3A00C81A2B /* WTSettingVc.m */,
+				6B7AD74728E2DF3A00C81A2B /* WTSettingVc.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		BA834AF0338962BC835DD146 /* Pods */ = {
@@ -166,6 +182,7 @@
 			files = (
 				6B7AD72B28E2869700C81A2B /* Assets.xcassets in Resources */,
 				6B7AD72E28E2869700C81A2B /* Main.storyboard in Resources */,
+				6B7AD74928E2DF3A00C81A2B /* WTSettingVc.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7AD74828E2DF3A00C81A2B /* WTSettingVc.m in Sources */,
 				6B7AD72928E2869500C81A2B /* ViewController.m in Sources */,
 				6B7AD73D28E2985800C81A2B /* WTSongListTableCellView.m in Sources */,
 				6B7AD73028E2869700C81A2B /* main.m in Sources */,

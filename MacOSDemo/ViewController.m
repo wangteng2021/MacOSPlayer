@@ -9,6 +9,8 @@
 #import <Masonry/Masonry.h>
 #import "WTSongListTableCellView.h"
 #import <AVKit/AVKit.h>
+#import "WTSettingVc.h"
+
 @interface ViewController ()<NSTableViewDelegate,NSTableViewDataSource>
 
 @property (nonatomic, strong) NSButton *openButton;
@@ -24,6 +26,8 @@
 @property (nonatomic, strong) NSMutableArray *pathResults;
 
 @property (nonatomic, strong) AVPlayer *player;
+
+@property (nonatomic, strong) NSButton *setButton;
 @end
 
 @implementation ViewController
@@ -79,6 +83,24 @@
         make.centerY.equalTo(self.songNameLabel);
     }];
     
+    self.setButton = ({
+       
+        NSButton *button = [[NSButton alloc] init];
+        
+        [button setTarget:self];
+        [button setAction:@selector(setButtonClick)];
+        [button setTitle:@"设置"];
+        [button setFont:[NSFont systemFontOfSize:12]];
+        [self.view addSubview:button];
+        
+        [button mas_makeConstraints:^(MASConstraintMaker *make) {
+           
+            make.leading.equalTo(self.openButton.mas_trailing).offset(20);
+            make.centerY.equalTo(self.openButton);
+        }];
+        button;
+    });
+    
     self.tableView = ({
        
         NSTableView *tableView = [[NSTableView alloc] init];
@@ -95,6 +117,11 @@
         tableView;
     });
     
+}
+- (void)setButtonClick {
+    WTSettingVc *setVc = [[WTSettingVc alloc] initWithWindowNibName:@"WTSettingVc"];
+    [setVc showWindow:self];
+//    [setVc presentingViewController];
 }
 - (void)buttonClick {
     
